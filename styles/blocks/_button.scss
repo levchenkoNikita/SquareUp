@@ -1,0 +1,56 @@
+@use '../helper' as *;
+
+.button {
+    @include fluid-text(14, 18);
+    color: var(--color-grey-15);
+    font-weight: 500;
+    line-height: 1.5;
+    height: 63px;
+    border-radius: 6px;
+    border: 1px solid var(--color-green-50);
+    background-color: var(--color-green-50);
+
+    @include laptop {
+        font-size: 14px;
+    }
+
+    @include hover {
+        color: var(--color-green-50);
+        background-color: transparent;
+    }
+
+    &--header {
+        height: 59px;
+        padding-block: 16px;
+        padding-inline: 24px;
+
+        @include laptop {
+            height: 45px;
+            padding-block: 12px;
+            padding-inline: 18px;
+        }
+
+        @include mobile-s {
+            width: 100%;
+        }
+    }
+
+    &--welcome {
+        padding-block: 18px;
+        padding-inline: 28px;
+
+        @include laptop {
+            font-size: 14px;
+            padding-block: 14px;
+            padding-inline: 20px;
+        }
+    }
+
+    &--start {
+        padding-inline: 24px;
+    }
+
+    &--submit {
+        padding-inline: 36px;
+    }
+}

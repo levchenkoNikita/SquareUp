@@ -1,0 +1,67 @@
+@use 'helper' as *;
+
+body {
+    @include fluid-text(16, 18);
+    font-family: var(--font-family);
+    color: var(--color-grey-90);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.006em;
+    background-color: var(--color-grey-10);
+
+    @include laptop {
+        @include fluid-text(14, 16);
+    }
+}
+
+a,
+button,
+input,
+textarea,
+label {
+    color: var(--color-grey-90);
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    transition-duration: var(--transition-duration);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    color: var(--color-white);
+    font-weight: 600;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    line-height: 1.5;
+}
+
+h1, .h1 {
+    @include fluid-text(48, 68);
+
+    @include laptop {
+        @include fluid-text(34, 48, 1440);
+    }
+}
+
+h2, .h2 {
+    @include fluid-text(38, 48);
+
+    @include laptop {
+        @include fluid-text(28, 38, 1440);
+    }
+}
+
+h3, .h3 {
+    @include fluid-text(30, 38);
+
+    @include laptop {
+        @include fluid-text(24, 30, 1440);
+    }
+}

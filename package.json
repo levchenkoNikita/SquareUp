@@ -1,0 +1,23 @@
+{
+  "name": "squareup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levchenkoNikita/SquareUp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levchenkoNikita/SquareUp/issues"
+  },
+  "homepage": "https://github.com/levchenkoNikita/SquareUp#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

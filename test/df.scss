@@ -1,0 +1,21 @@
+@use '../styles/helper' as *;
+
+body {
+    background-color: black;
+}
+
+.div {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    background-color: white;
+}
+
+.div::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+    @include abs(50%, 50%, true, -50%, -50%);
+}

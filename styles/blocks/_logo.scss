@@ -1,0 +1,16 @@
+@use '../helper' as *;
+
+.logo {
+    width: 178px;
+    height: 60px;
+    flex-shrink: 0;
+
+    @include laptop {
+        width: 119px;
+        height: 40px;
+    }
+
+    @include hover {
+        opacity: 0.8;
+    }
+}

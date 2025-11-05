@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@mixin fluid-text($min, $max, $viewport: 1920) {
+
+    @if $min > $max {
+        @error "Первый аргумент должен быть меньше второго!!!";
+    }
+
+    $res: math.div($max, $viewport);
+    font-size: clamp(#{$min}px, #{$res * 100vw}, #{$max}px);
+}
+
+@mixin flex-center($isInline: false) {
+    @if $isInline {
+        display: inline-flex;
+    }
+    @else {
+        display: flex;
+    }
+
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin abs($top: 0px, $left: 0px, $isTranslate: false, $translateX: 0px, $translateY: 0px) {
+
+    @if math.is-unitless($top) or math.is-unitless($left) {
+        @error "В параметрах должы быть указаны единицы измерения!!!";
+    } 
+
+    position: absolute;
+    top: $top;
+    left: $left;
+
+    @if $isTranslate {
+
+        @if math.is-unitless($translateX) or math.is-unitless($translateY) {
+            @error "В параметрах должы быть указаны единицы измерения!!!";
+        }
+
+        translate: #{$translateX} #{$translateY};
+    }
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin square($size) {
+
+    @if math.is-unitless($size) {
+        @error "В параметрах должы быть указаны единицы измерения!!!";
+    }
+
+    width: $size;
+    height: $size;
+}
