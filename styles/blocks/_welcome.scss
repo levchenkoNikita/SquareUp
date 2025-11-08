@@ -1,0 +1,87 @@
+@use '../helper' as *;
+
+.welcome {
+
+    @include mobile-s {
+        position: relative;
+        border-bottom: 1px solid var(--color-grey-15);
+    }
+
+    &__wrapper {
+        @include flex-center;
+        overflow: hidden;
+        flex-direction: column;
+        row-gap: 40px;
+        padding-block: 262px 274px;
+
+        @include mobile-s {
+            border: none;
+        }
+    }
+
+    &__info {
+        @include fluid-text(18, 22);
+        color: var(--color-grey-60);
+        height: auto;
+        line-height: 1.5;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        padding-block: 36px;
+        padding-inline: 40px;
+        border-radius: 12px;
+        border: 1px solid var(--color-grey-20);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background-color: var(--color-blur);
+
+        @include laptop {
+            padding-block: 26px;
+            padding-inline: 30px;
+        }
+
+        @include mobile {
+            @include fluid-text(16, 18, 700);
+            text-align: center;
+            padding-block: 18px;
+            padding-inline: 20px;
+        }
+
+        &-word {
+            color: var(--color-white);
+            padding-block: 12px;
+            padding-inline: 14px;
+            border-radius: 8px;
+            background-color: var(--color-grey-15);
+
+            @include laptop {
+                padding-block: 8px;
+                padding-inline: 10px;
+            }
+
+            @include tablet {
+                color: inherit;
+                padding: 0;
+                text-transform: lowercase;
+                background-color: transparent;
+            }
+        }
+
+        &-wrapper {
+            padding-inline: 16px;
+        }
+    }
+
+    &__title {
+        @include fluid-text(34, 48, 1050);
+        max-width: 700px;
+        width: 100%;
+        padding-inline: 16px;
+        text-align: center;
+    }
+
+    &__button-wrapper {
+        @include flex-center(true);
+        column-gap: 15px;
+    }
+
+}

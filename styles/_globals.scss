@@ -1,5 +1,9 @@
 @use 'helper' as *;
 
+html.is-lock {
+    overflow: hidden;
+}
+
 body {
     @include fluid-text(16, 18);
     font-family: var(--font-family);
@@ -32,7 +36,7 @@ h2, .h2,
 h3, .h3 {
     color: var(--color-white);
     font-weight: 600;
-    line-height: auto;
+    line-height: 1.5;
     letter-spacing: 0;
 }
 

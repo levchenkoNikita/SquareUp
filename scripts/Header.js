@@ -17,14 +17,26 @@ class Header {
 
     onClick(event) {
         const currentElement = event.target;
-        console.log(currentElement)
 
+        //  HEADER MENU
         if("jsBurgerButton" in currentElement.dataset) {
             this.handleBurgerButton(currentElement);
         }
     }
 
     handleBurgerButton(element) {
+
+        const htmlIsLock = document.documentElement.classList.contains(this.stateClasses.isLock);
+
+        if(!htmlIsLock) {
+            document.documentElement.classList.add(this.stateClasses.isLock);
+        }
+        else {
+            setTimeout(() => {
+                document.documentElement.classList.remove(this.stateClasses.isLock);
+            }, 300);
+        }
+
         element.classList.toggle(this.stateClasses.isActive);
         this.menuElement.classList.toggle(this.stateClasses.isActive);
     }

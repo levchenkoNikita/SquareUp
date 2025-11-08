@@ -27,12 +27,19 @@
     --color-grey-60: #98989A;
     --color-grey-90: #E6E6E6;
 
+    // Color for blur
+    --color-blur: rgba($color: #242424, $alpha: 0.2);
+
     // Container
     --container: 1596px;
-    --container-padding-x: 60px;
+    --container-padding-x: 80px;
 
     @include laptop {
         --container: 1280px;
+    }
+
+    @include mobile {
+        --container-padding-x: 50px;
     }
 
     @include mobile-s {

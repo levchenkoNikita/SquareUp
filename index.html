@@ -11,7 +11,7 @@
 <body>
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <div class="header__inner container container--border-none">
+        <div class="header__inner container">
             <a href="#" class="header__logo logo">
                 <img src="./images/logo.png" alt="logo" class="header__logo-image" width="178" height="60">
             </a>
@@ -48,21 +48,121 @@
                         </a>
                     </li>
                 </ul>
-                <button class="header__button button button--header visible-mobile-s" type="button" aria-label="Contanc us" data-js-contact-us-button>
+                <button class="header__button button button--header visible-mobile-s" type="button"
+                    aria-label="Contanc us" data-js-contact-us-button>
                     Contact Us
                 </button>
             </nav>
             <div class="header__button-wrapper">
-                <button class="header__button button button--header hidden-mobile-s" type="button" aria-label="Contanc us" data-js-contact-us-button>
+                <button class="header__button button button--header hidden-mobile-s" type="button"
+                    aria-label="Contanc us" data-js-contact-us-button>
                     Contact Us
                 </button>
-                <button class="header__burger-button burger-button visible-tablet" title="menu" aria-label="menu" data-js-burger-button>
+                <button class="header__burger-button burger-button visible-tablet" title="menu" aria-label="menu"
+                    data-js-burger-button>
                     <span></span>
                 </button>
             </div>
         </div>
         <div class="header__background"></div>
     </header>
+
+    <main class="main">
+        <!-- ========== WELCOME ==========-->
+        <section class="welcome">
+            <div class="welcome__inner container container--no-relative">
+                <div class="welcome__wrapper wrapper border">
+                    <h1 class="welcome__title">
+                        A Digital Product Studio
+                        that will Work
+                    </h1>
+                    <div class="welcome__info-wrapper">
+                        <div class="welcome__info">
+                            <p>
+                                For <span class="welcome__info-word">Startups</span>
+                                ,&nbsp;
+                                <span class="welcome__info-word">Enterprise leaders</span>
+                                ,&nbsp;
+                                <span class="welcome__info-word">Media & Publishers</span>
+                                <span class="welcome__info-comma visible-mobile">,</span>
+                                &nbsp;and&nbsp;
+                                <span class="welcome__info-word">Social Good</span>
+                                <span class="welcome__info-dot visible-mobile">.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="welcome__button-wrapper">
+                        <button class="welcome__button welcome__button--our-works button button--welcome button--dark"
+                            aria-label="button about Our Works">
+                            Our Works
+                        </button>
+                        <button class="welcome__button welcome__button--contact-us button button--welcome"
+                            aria-label="button of Contact Us">
+                            Contact Us
+                        </button>
+                    </div>
+                    <div class="welcome__background-image background-image background-image--grow">
+
+                    </div>
+                    <div class="welcome__background-image background-image background-image--grid hidden-mobile-s">
+
+                    </div>
+                </div>
+            </div>
+            <div class="welcome__background-image background-image background-image--grid visible-mobile-s">
+
+            </div>
+        </section>
+        <!-- ========== Companies ==========-->
+        <section class="companies">
+            <div class="companies__inner container">
+                <div class="companies__wrapper wrapper border">
+                    <ul class="companies__list">
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/zapier-logo.svg" alt="Zapier" class="companies__image" width="100"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/spotify-logo.svg" alt="Spotify" class="companies__image" width="145"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/zoom-logo.svg" alt="Zoom" class="companies__image" width="102"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/slack-logo.svg" alt="Slack" class="companies__image" width="126"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/amazon-logo.svg" alt="Amazon" class="companies__image" width="115"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                        <li class="companies__item">
+                            <a href="#" class="companies__link">
+                                <img src="/images/adobe-logo.svg" alt="Adobe" class="companies__image" width="139"
+                                    height="50" loading="lazy">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="companies__info">
+                        Trusted By 250+ Companies
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
 
     <script src="./scripts/main.js" type="module"></script>
 </body>

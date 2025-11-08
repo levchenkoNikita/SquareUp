@@ -1,0 +1,35 @@
+@use '../helper' as *;
+
+.background-image {
+    position: absolute;
+
+    &--grow {
+        width: 1596px;
+        top: 100%;
+        left: 50%;
+        z-index: -1;
+        translate: -50% -100%;
+        height: 448px;
+        background: url('/images/bg-vector--welcome.png') center/100% no-repeat;
+
+        @include laptop {
+            width: 1488px;
+            height: 406px;
+        }
+
+        @include tablet {
+            width: 1118px;
+            height: 304px;
+        }
+    }
+
+    &--grid {
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        translate: 0 6px;
+        height: 100%;
+        background: url('/images/background-image--welcome.png') center/cover no-repeat;
+    }
+}
