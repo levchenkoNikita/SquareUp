@@ -293,7 +293,7 @@ body {
 }
 @media (max-width: 1440px) {
   body {
-    font-size: clamp(14px, 0.8333333333vw, 16px);
+    font-size: clamp(14px, 1.1111111111vw, 16px);
   }
 }
 
@@ -336,6 +336,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: clamp(38px, 2.5vw, 48px);
+  margin-bottom: 14px;
 }
 @media (max-width: 1440px) {
   h2, .h2 {
@@ -427,6 +428,8 @@ h3, .h3 {
   font-weight: 500;
   line-height: 1.5;
   height: 63px;
+  padding-block: 18px;
+  padding-inline: 20px;
   border-radius: 6px;
   border: 1px solid var(--color-green-50);
   background-color: var(--color-green-50);
@@ -447,6 +450,11 @@ h3, .h3 {
     color: var(--color-green-50);
     background-color: transparent;
   }
+}
+.button--grey {
+  color: var(--color-white);
+  border-color: var(--color-grey-15);
+  background-color: var(--color-grey-15);
 }
 .button--header {
   height: 59px;
@@ -606,8 +614,40 @@ h3, .h3 {
   left: 0;
   z-index: -2;
   translate: 0 6px;
-  height: 100%;
+  height: 1000px;
   background: url("/images/background-image--welcome.png") center/cover no-repeat;
+}
+.background-image--waves {
+  width: 100%;
+  top: -280px;
+  left: 0;
+  z-index: -5;
+  opacity: 0.3;
+  height: 897px;
+  background: url("/images/bg-waves--our-service-alt.png") center/cover no-repeat;
+}
+.title-block {
+  position: relative;
+  padding-block: 120px;
+  padding-inline: 10px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-grey-15);
+}
+.title-block__background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.title-block__background-color--green {
+  z-index: -4;
+  background-color: rgba(20, 32, 0, 0.4);
+}
+.title-block__background-color--dark {
+  z-index: -3;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header {
@@ -747,6 +787,9 @@ h3, .h3 {
   column-gap: 15px;
 }
 
+.welcome {
+  overflow: hidden;
+}
 @media (max-width: 480px) {
   .welcome {
     position: relative;
@@ -893,6 +936,185 @@ h3, .h3 {
     padding-block: 14px;
     padding-inline: 24px;
   }
+}
+
+.our-service__header {
+  position: relative;
+  padding-block: 120px;
+  padding-inline: 10px;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid var(--color-grey-15);
+}
+.our-service__header-background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.our-service__header-background-color--green {
+  z-index: -4;
+  background-color: rgba(20, 32, 0, 0.4);
+}
+.our-service__header-background-color--dark {
+  z-index: -3;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.our-service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1024px) {
+  .our-service__list {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .our-service__list {
+    grid-template-columns: 1fr;
+  }
+}
+.our-service__item:not(:last-child) {
+  border-right: 1px solid var(--color-grey-15);
+}
+@media (max-width: 1024px) {
+  .our-service__item:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-15);
+  }
+}
+@media (max-width: 767px) {
+  .our-service__item:not(:last-child) {
+    border-right: none;
+  }
+}
+@media (max-width: 1024px) {
+  .our-service__item:nth-child(2) {
+    border-right: none;
+  }
+}
+@media (max-width: 1024px) {
+  .our-service__item:last-child {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 767px) {
+  .our-service__item:last-child {
+    grid-column: 1;
+  }
+}
+.our-service__article {
+  max-width: 532px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+@media (max-width: 1440px) {
+  .our-service__article {
+    padding: 30px;
+    row-gap: 30px;
+  }
+}
+.our-service__article-info {
+  height: 230px;
+  margin-bottom: 64px;
+}
+@media (max-width: 1440px) {
+  .our-service__article-info {
+    margin-bottom: 54px;
+  }
+}
+.our-service__article-title {
+  margin-bottom: 20px;
+}
+@media (max-width: 1440px) {
+  .our-service__article-title {
+    margin-bottom: 14px;
+  }
+}
+.our-service__article-image {
+  --sizeImage: 88px;
+  width: var(--sizeImage);
+  height: var(--sizeImage);
+}
+@media (max-width: 1440px) {
+  .our-service__article-image {
+    --sizeImage: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .our-service__article-image {
+    --sizeImage: 58px;
+  }
+}
+.our-service__article-image--design {
+  background: url("/icons/brush--our-service.png") center/100% no-repeat;
+}
+.our-service__article-image--engineering {
+  background: url("/icons/engineering--our-service.png") center/100% no-repeat;
+}
+.our-service__article-image--project-management {
+  background: url("/icons/management--our-service.png") center/100% no-repeat;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.advantages__item:nth-child(odd) {
+  border-right: 1px solid var(--color-grey-15);
+}
+.advantages__item:nth-child(1), .advantages__item:nth-child(2) {
+  border-bottom: 1px solid var(--color-grey-15);
+}
+.advantages__article {
+  max-width: 800px;
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+@media (max-width: 1440px) {
+  .advantages__article {
+    padding: 60px;
+    row-gap: 30px;
+  }
+}
+.advantages__article-header {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.advantages__article-header-image {
+  --sizeImage: 88px;
+  width: var(--sizeImage);
+  height: var(--sizeImage);
+}
+@media (max-width: 1440px) {
+  .advantages__article-header-image {
+    --sizeImage: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .advantages__article-header-image {
+    --sizeImage: 58px;
+  }
+}
+.advantages__article-header-image--expertise {
+  background: url("/icons/expertise--advantages.png") center/100% no-repeat;
+}
+.advantages__article-header-image--approach {
+  background: url("/icons/approach--advantages.png") center/100% no-repeat;
+}
+.advantages__article-header-image--solutions {
+  background: url("/icons/solutions--advantages.png") center/100% no-repeat;
+}
+.advantages__article-header-image--partnership {
+  background: url("/icons/partnership--advantages.png") center/100% no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

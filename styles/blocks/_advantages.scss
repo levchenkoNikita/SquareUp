@@ -1,0 +1,71 @@
+@use '../helper' as *;
+
+.advantages {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+        &:nth-child(odd) {
+            border-right: 1px solid var(--color-grey-15);
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-bottom: 1px solid var(--color-grey-15);
+        }
+    }
+
+    &__article {
+        max-width: 800px;
+        width: 100%;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        @include laptop {
+            padding: 60px;
+            row-gap: 30px;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            &-image {
+                --sizeImage: 88px;
+
+                width: var(--sizeImage);
+                height: var(--sizeImage);
+
+                @include laptop {
+                    --sizeImage: 70px;
+                }
+
+                @include mobile-s {
+                    --sizeImage: 58px;
+                }
+
+                &--expertise {
+                    background: url('/icons/expertise--advantages.png') center/100% no-repeat;
+                }
+
+                &--approach {
+                    background: url('/icons/approach--advantages.png') center/100% no-repeat;
+                }
+
+                &--solutions {
+                    background: url('/icons/solutions--advantages.png') center/100% no-repeat;
+                }
+
+                &--partnership {
+                    background: url('/icons/partnership--advantages.png') center/100% no-repeat;
+                }
+            }
+        }
+    }
+}

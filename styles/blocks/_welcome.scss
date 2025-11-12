@@ -1,6 +1,7 @@
 @use '../helper' as *;
 
 .welcome {
+    overflow: hidden;
 
     @include mobile-s {
         position: relative;

@@ -6,6 +6,8 @@
     font-weight: 500;
     line-height: 1.5;
     height: 63px;
+    padding-block: 18px;
+    padding-inline: 20px;
     border-radius: 6px;
     border: 1px solid var(--color-green-50);
     background-color: var(--color-green-50);
@@ -17,6 +19,12 @@
     @include hover {
         color: var(--color-green-50);
         background-color: transparent;
+    }
+
+    &--grey {
+        color: var(--color-white);
+        border-color: var(--color-grey-15);
+        background-color: var(--color-grey-15);
     }
 
     &--header {
