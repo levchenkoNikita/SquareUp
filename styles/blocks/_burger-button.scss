@@ -10,52 +10,60 @@
     background-color: var(--color-grey-15);
 
     &.is-active {
-        & span::before {
+        & .burger-button__span::before {
             rotate: -45deg;
+            translate: 0px 6px;
         }
 
-        & span::after {
+        & .burger-button__span::after {
             width: 24px;
             rotate: 45deg;
+            translate: -12px -6px;
         }
 
-        & span {
+        & .burger-button__span-deep {
             width: 0;
         }
     }
 
-    & span {
+    &__span {
         position: relative;
         width: 24px;
         height: 2px;
         display: block;
         border-radius: 6px;
-        background-color: var(--color-green-80);
         pointer-events: none;
         transition-duration: var(--transition-duration-alt);
 
+        &-deep {
+            width: 24px;
+            height: 2px;
+            display: block;
+            background-color: var(--color-green-80);
+        }
+
         &::before {
             content: '';
-            position: relative;
+            position: absolute;
             top: -6px;
             left: 0;
             width: 24px;
             height: 100%;
-            display: block;
             border-radius: 6px;
-            background-color: inherit;
+            background-color: var(--color-green-80);
+            transition-duration: var(--transition-duration-alt);
         }
 
         &::after {
             content: '';
-            position: relative;
+            position: absolute;
             top: 6px;
             left: 50%;
             width: 12px;
             height: 100%;
-            display: block;
             border-radius: 6px;
-            background-color: inherit;
+            background-color: var(--color-green-80);
+            transition-duration: var(--transition-duration-alt);
         }
     }
 }
